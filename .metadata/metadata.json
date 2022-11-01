@@ -1,0 +1,17 @@
+{
+  "name" : "lightmod",
+  "id" : "",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true,
+	"replace_paths" : [
+		"gfx/FX",
+		"gfx/map/environment",
+		"gfx/map/post_effects"
+	]
+  }
+}
