@@ -30,10 +30,19 @@ Code
 		return saturate( vMin * vFogFactor * FogMax );
 	}
 
+	float3 GameCalculateDistanceFogColor( float3 WorldSpacePos )
+	{
+		float3 Diff = WorldSpacePos - CameraPosition; //vector from start of fog to point
+		float FogColorFactor = saturate((dot(normalize(Diff), ToSunDir) + 1) / 2);
+		FogColorFactor = FogColorFactor * FogColorFactor * 0.8f;
+		return lerp(FogColor, SunDiffuse, FogColorFactor);
+	}
+
 	float3 GameApplyDistanceFog( float3 Color, float3 WorldSpacePos )
 	{
-		float factor = GameCalculateDistanceFogFactor( WorldSpacePos ) ;
-		return lerp( Color, HardLight( Color, FogColor ), factor );
+		float factor = GameCalculateDistanceFogFactor( WorldSpacePos );
+		float3 fogColor = GameCalculateDistanceFogColor(WorldSpacePos);
+		return lerp( Color, HardLight( Color, fogColor ), factor );
 	}
 	float GameApplyDistanceFog( float Value, float3 WorldSpacePos )
 	{
