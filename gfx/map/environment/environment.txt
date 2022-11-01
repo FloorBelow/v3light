@@ -4,19 +4,19 @@
 # Sun
 sun_color = { 1.02 0.98 0.96 }
 sun_intensity = 5.0
-sun_direction = { -0.5 0.55 0.9 }	#	+Right/-Left	Height  -Front/+Back
+sun_direction = { 0 1 0 }	#	+Right/-Left	Height  -Front/+Back
 
 # Offset overrides
-shadow_direction_offset = { -0.48 0.0 -1.45 }
-#shadow_direction_offset = { 0.0 0.0 0.0 }
+#shadow_direction_offset = { -0.48 0.0 -1.45 }
+shadow_direction_offset = { 0.0 0.0 0.0 }
 water_sun_direction_offset = { 0.0 0.0 0.0 }
 
 # Shadow sharpness
 shadowmap_kernelscale = 1.0
 
 # Cubemap
-cubemap_intensity = 2.5
-cubemap = "gfx/map/environment/cubemap_blackbottom.dds"
+cubemap_intensity = 1.0
+cubemap = "gfx/map/environment/qwantani_8k_nosun_cube_specular.dds"
 cubemap_y_rotation = 260
 
 ######## Postprocessing ########
