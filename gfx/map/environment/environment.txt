@@ -3,7 +3,7 @@
 ######## Light ########
 # Sun
 sun_color = { 1.02 0.98 0.96 }
-sun_intensity = 5.0
+sun_intensity = 6
 sun_direction = { 0 1 0 }	#	+Right/-Left	Height  -Front/+Back
 
 # Offset overrides
@@ -15,7 +15,7 @@ water_sun_direction_offset = { 0.0 0.0 0.0 }
 shadowmap_kernelscale = 1.0
 
 # Cubemap
-cubemap_intensity = 1.0
+cubemap_intensity = 0.75
 cubemap = "gfx/map/environment/qwantani_8k_nosun_cube_specular.dds"
 cubemap_y_rotation = 260
 
@@ -48,11 +48,15 @@ exposure_function = "FixedExposure"
 exposure = 1.0						# Only used with fixed exposure
 
 # Fog
-fog_color = { 0.75 0.75 0.75 }		# (Overwritten by post posteffect_volumes.txt)
-fog_begin = 0.0						# (Overwritten by post posteffect_volumes.txt)
-fog_end = 0.0						# (Overwritten by post posteffect_volumes.txt)
-fog_max = 0.0						# (Overwritten by post posteffect_volumes.txt)
-
+#fog_color = { 0.75 0.75 0.75 }		# (Overwritten by post posteffect_volumes.txt)
+#fog_begin = 0.0						# (Overwritten by post posteffect_volumes.txt)
+#fog_end = 0.0						# (Overwritten by post posteffect_volumes.txt)
+#fog_max = 0.0						# (Overwritten by post posteffect_volumes.txt)
+ 
+fog_color = { 0.50 0.62 0.95 }
+fog_max = 13
+fog_begin = 0
+fog_end = 14.0
 
 ######## Tree ########
 tree_sway_loop_speed = 0.75
