@@ -2,7 +2,7 @@ Includes = {
 	"jomini/jomini_vertical_border.fxh"
 	"cw/utility.fxh"
 	"fog_of_war.fxh"
-	"distance_fog.fxh"
+	"distance_fog2.fxh"
 	"pdxverticalborder.fxh"
 	"dynamic_masks.fxh"
 }

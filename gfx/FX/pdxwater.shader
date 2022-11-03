@@ -4,7 +4,7 @@ Includes = {
 	"jomini/jomini_water_pdxmesh.fxh"
 	"jomini/jomini_mapobject.fxh"
 	"sharedconstants.fxh"
-	"distance_fog.fxh"
+	"distance_fog2.fxh"
 	"coloroverlay.fxh"
 	"fog_of_war.fxh"
 	"ssao_struct.fxh"

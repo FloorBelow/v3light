@@ -5,7 +5,7 @@ Includes = {
 	"jomini/jomini_flat_border.fxh"
 	"jomini/jomini_lighting.fxh"
 	"sharedconstants.fxh"
-	"distance_fog.fxh"
+	"distance_fog2.fxh"
 	"fog_of_war.fxh"
 	"ssao_struct.fxh"
 	"pdxverticalborder.fxh"

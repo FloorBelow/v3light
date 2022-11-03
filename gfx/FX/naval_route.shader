@@ -4,7 +4,7 @@ Includes = {
 	"jomini/jomini_lighting.fxh"
 	"jomini/jomini_spline.fxh"
 	"sharedconstants.fxh"
-	"distance_fog.fxh"
+	"distance_fog2.fxh"
 	"fog_of_war.fxh"
 }
 

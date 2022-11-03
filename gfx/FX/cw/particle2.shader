@@ -1,6 +1,6 @@
 Includes = {
 	"cw/particle2.fxh"
-	"distance_fog.fxh"
+	"distance_fog2.fxh"
 	"coloroverlay.fxh"
 	"fog_of_war.fxh"
 	"ssao_struct.fxh"
