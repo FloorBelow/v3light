@@ -51,10 +51,21 @@ posteffect_values = {
 	colorbalance = { 1.04 0.95 0.9 }	# Color balance
 
 
-	fog_color = { 0.75 0.77 0.83 }
-	fog_max = 3000.0
-	fog_begin = 1.0
-	fog_end = 10.0
+	fog_color = { 0.50 0.62 0.95 }
+	fog_max = 13
+	fog_begin = 0
+	fog_end = 14.0
+}
+
+##New values
+posteffect_values = {
+	name = height_beforepaper
+	inherit = default
+	
+	# Settings
+	fog_max = 1
+	fog_begin = 0.33
+	fog_end = 35.0
 }
 
 ### Height volumes ###
