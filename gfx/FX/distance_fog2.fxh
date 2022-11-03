@@ -23,10 +23,10 @@ Code
 		Diff.xz = float2( dot( Diff.xz, CameraRightDir.xz ) * ( 1.0 / ScalingX ), dot( Diff.xz, secondaryPrincipal ) * ( 1.0 / ScalingY ) );
 
 		// Fog factor (amount) 
-		float3 DiffExtendo = float3(abs(Diff.x) + 80.0f, abs(Diff.y) * FogMax, abs(Diff.z) + 80.0f);
+		float3 DiffExtendo = float3(abs(Diff.x) + FogCloseOffset, abs(Diff.y) * FogMax, abs(Diff.z) + FogCloseOffset);
 		float vFogFactor = 1.0 - normalize(DiffExtendo).y; // abs b/c of reflections
 		vFogFactor = vFogFactor * vFogFactor;
-		float vMin = min( length(Diff)/FogEnd2 * (1 - FogBegin2) + FogBegin2, 1);
+		float vMin = min( length(Diff)/FogEnd2 * (1 - FogBegin2) + FogBegin2, FogFarOffset);
 		return saturate( vMin * vFogFactor );
 	}
 

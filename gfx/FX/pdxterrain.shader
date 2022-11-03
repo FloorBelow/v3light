@@ -5,6 +5,7 @@ Includes = {
 	"cw/lighting.fxh"
 	"cw/shadow.fxh"
 	"cw/camera.fxh"
+	"jomini/jomini.fxh"
 	"jomini/jomini_lighting.fxh"
 	"jomini/jomini_province_overlays.fxh"
 	"jomini/jomini_water.fxh"
@@ -184,7 +185,7 @@ PixelShader =
 
 				// Cubemap Diffuse light
 				float3 RotatedDiffuseCubemapUV = mul( CastTo3x3( LightingProps._CubemapYRotation ), MaterialProps._Normal );
-				float3 DiffuseRad = PdxTexCubeLod( EnvironmentMap, RotatedDiffuseCubemapUV, ( PDX_NumMips - 1 - PDX_MipOffset ) ).rgb * LightingProps._CubemapIntensity; // TODO, maybe we should split diffuse and spec intensity?
+				float3 DiffuseRad = PdxTexCubeLod( EnvironmentMap, RotatedDiffuseCubemapUV, ( PDX_NumMips - 1 - PDX_MipOffset ) ).rgb * LightingProps._CubemapIntensity * AmbientPosX; // TODO, maybe we should split diffuse and spec intensity?
 				DiffuseIBL = DiffuseRad * MaterialProps._DiffuseColor;
 
 				// Cubemap specular light
@@ -197,7 +198,7 @@ PixelShader =
 
 				float MipLevel = BurleyToMipSimple( MaterialProps._PerceptualRoughness );
 				float3 RotatedSpecularCubemapUV = mul( CastTo3x3( LightingProps._CubemapYRotation ), DominantReflectionVector );
-				float3 SpecularRad = PdxTexCubeLod( EnvironmentMap, RotatedSpecularCubemapUV, MipLevel ).rgb * LightingProps._CubemapIntensity; // TODO, maybe we should split diffuse and spec intensity?
+				float3 SpecularRad = PdxTexCubeLod( EnvironmentMap, RotatedSpecularCubemapUV, MipLevel ).rgb * LightingProps._CubemapIntensity * AmbientPosX; // TODO, maybe we should split diffuse and spec intensity?
 				SpecularIBL = SpecularRad * SpecularFade * SpecularReflection;
 
 				return DiffuseIBL + SpecularIBL;

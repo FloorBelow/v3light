@@ -51,21 +51,39 @@ posteffect_values = {
 	colorbalance = { 1.04 0.95 0.9 }	# Color balance
 
 
-	fog_color = { 0.50 0.62 0.95 }
+	#fog_color = { 0.50 0.62 0.95 }
 	fog_max = 13
-	fog_begin = 0
+	fog_begin = 1.5
 	fog_end = 14.0
 }
 
+
 ##New values
 posteffect_values = {
-	name = height_beforepaper
+	name = fog_00
+	inherit = default
+	fog_max = 13
+	fog_begin = .15
+	fog_end = 10.0
+}
+
+
+posteffect_values = {
+	name = fog_50
+	inherit = default
+	fog_max = 13
+	fog_begin = 0.15
+	fog_end = 16.0
+}
+
+posteffect_values = {
+	name = fog_600
 	inherit = default
 	
 	# Settings
-	fog_max = 1
-	fog_begin = 0.33
-	fog_end = 35.0
+	fog_max = 13
+	fog_begin = 0.2
+	fog_end = 38.0
 }
 
 ### Height volumes ###
@@ -301,10 +319,31 @@ posteffect_volumes = {
 	posteffect_height_volume = {
 		name = "zoom_volume_01"
 		
-		posteffect_values_day = default
+		posteffect_values_day = fog_00
 		posteffect_values_night = default
 		
 		height = 0 				# Should be equal to the "camera zoom" when you want the volume to have half effect if you "fade distance" is above 0
 		fade_distance = 0 		# The lenght of the "camera zoom" value before the volume takes half effect
 	}
+
+	posteffect_height_volume = {
+		name = "zoom_volume_01"
+		
+		posteffect_values_day = fog_50
+		posteffect_values_night = default
+		
+		height = 45				# Should be equal to the "camera zoom" when you want the volume to have half effect if you "fade distance" is above 0
+		fade_distance = 0 		# The lenght of the "camera zoom" value before the volume takes half effect
+	}
+	
+	posteffect_height_volume = {
+		name = "zoom_volume_01"
+		
+		posteffect_values_day = fog_600
+		posteffect_values_night = default
+		
+		height = 500 				# Should be equal to the "camera zoom" when you want the volume to have half effect if you "fade distance" is above 0
+		fade_distance = 0 		# The lenght of the "camera zoom" value before the volume takes half effect
+	}
+	
 }

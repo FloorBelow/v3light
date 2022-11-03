@@ -2,9 +2,11 @@
 
 ######## Light ########
 # Sun
-sun_color = { 1.02 0.98 0.96 }
-sun_intensity = 6
+sun_color = { 1.04 1 0.96 }
+sun_intensity = 7
 sun_direction = { 0 1 0 }	#	+Right/-Left	Height  -Front/+Back
+
+ambient_pos_x = { 0.388 0.471 0.643 }
 
 # Offset overrides
 #shadow_direction_offset = { -0.48 0.0 -1.45 }
@@ -15,9 +17,9 @@ water_sun_direction_offset = { 0.0 0.0 0.0 }
 shadowmap_kernelscale = 1.0
 
 # Cubemap
-cubemap_intensity = 0.75
+cubemap_intensity = 5
 cubemap = "gfx/map/environment/qwantani_8k_nosun_cube_specular.dds"
-cubemap_y_rotation = 260
+cubemap_y_rotation = -20
 
 ######## Postprocessing ########
 # Color settings	(Keep neutral, use posteffect volumes instead)

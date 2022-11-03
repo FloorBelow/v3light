@@ -1,0 +1,5 @@
+﻿NGraphics = {
+	FOG_FAR_OFFSET = 1	# Fog Max
+	FOG_CLOSE_OFFSET = 50	# Fog Attenuation Add
+	#FOG_WIDTH_SCALE = 1.6	# Fog width scaling
+}
